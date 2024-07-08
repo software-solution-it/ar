@@ -1,0 +1,204 @@
+/* VISUALIZADOR DO 3D*/
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+	background: dark-blue;
+}
+
+model-viewer{
+	
+    width: 100vw;
+    height: 88vh;
+	
+}
+
+
+model-viewer::part(default-ar-button) {
+    transform: scale(3.4); /* Ajuste o tamanho */
+    margin: 0;
+    top: 22%; /* Distância da borda inferior */
+    Right: 5%;   /* Distância da borda esquerda */
+    position: fixed;
+	z-index: 9999999;
+}
+
+
+
+/* BOTAO DOS PLAYERS DE AUDIO 
+#player{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-right:15px;
+}
+
+#player button{
+    border: none;
+    width:32px;
+    background-color: transparent;
+    margin: 0 5px
+}
+
+#player img{
+    width:32;
+    height:32; 
+    z-index: 99;
+}
+
+*/
+
+/* NOME DO 3D QUE FICA NO CANTO SUPERIOR ESQUERDO */
+#nome{
+	position: absolute;
+	color: white;
+	top: 1%;
+    left: 1%;
+}
+
+.botaoVoltar{
+    transform: scale(3.4);
+    margin-left: 60px;
+    position: absolute;
+    top: 7rem;
+}
+
+
+/* CSS DA DIV LATERAL DE INFORMAÇÕES */
+#pop{
+	display:none;
+	position:absolute;
+	top:10%;
+	right:0.5rem;
+	padding:10px;
+	width:25rem;
+	height:75%;
+	border-radius: 15px;
+	opacity: 0.8;
+    background: #fff;
+}
+
+.logosuperior{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* BOTOES DE INFORAMAÇAO E DE ANIMACOES */
+#logofazendadavovo{
+	background-color: white;
+	position: absolute;
+    width: 100%;
+	top: 0%;
+    display: flex;
+    flex-direction: row;
+	box-shadow: -1px -1px 5px 3px rgba(0, 0, 0, 0.81);
+	-webkit-box-shadow: -1px -1px 5px 3px rgba(0, 0, 0, 0.81);
+	-moz-box-shadow: -1px -1px 5px 3px rgba(0, 0, 0, 0.81);
+}
+
+#botoes button{
+    margin: 0 .3rem;
+    cursor: pointer; 
+}
+
+.botoesanimacao button{
+    background: #069cc2;
+    border: none;
+    font-weight: bold;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 15px;
+}
+
+.botoesanimacao{
+    background: none;
+}
+
+.buttonInformacao{
+    background: #c4251c;
+    border: none;
+    font-weight: bold;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+    padding: 15px;
+}
+
+/* BOTAO DE VOLTAR PARA O MENU DOS 3DS */
+#botao{
+	position: absolute;
+	left: .1rem;
+	top: 50%;
+    background: transparent;
+    border: none;
+
+}
+
+#botao img{
+    width: 64px;
+    height: 64px;
+    border: none;
+    background: transparent;
+
+}
+
+
+/* CSS DO MENU*/
+.logoinferior{
+    background-color: #bc153B;
+	position: absolute;
+    width: 100%;
+	bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+	box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.81);
+	-webkit-box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.81);
+	-moz-box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.81);
+	
+}
+
+.botoesMenu{
+    background-color:#fff;
+    opacity: 0.7; 
+    border-radius: 10px;
+    width: 50rem;
+    height: 80px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.botoesMenu button {
+    border: none;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+}
+
+.botoesMenu :hover{
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.botoesMenu .inactive{
+    background-image: linear-gradient(to right, #dbd3d3ab 0%, #dbd3d3ab  51%, #dbd3d3ab  100%);
+}
+
+.botoesMenu .active{
+    background-image: linear-gradient(to left, #4776E6 0%, #8E54E9  51%, #4776E6  100%);
+    cursor: pointer;
+}
+

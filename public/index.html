@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Fazenda da Vovó - Bolo da vovó</title>
+	<script type="module" defer
+		src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="public/style.css" media="screen" />
+	<link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+</head>
+
+
+<body>
+	<!--Parâmetros do Modelo em 3D-->
+	<model-viewer id="model-viewer" ar camera-controls touch-action="pan-x pan-y" min-camera-orbit="auto 40deg auto"
+		max-camera-orbit="auto 50deg auto" skybox-image="imgs/background.jpg" shadow-intensity="1" exposure="1.8"
+		autoplay="" animation-name="hover"
+		alt="Bolo é um alimento à base de farinha, geralmente doce e cozido no forno. Os bolos são um dos componentes principais das festas, como as de aniversário e casamento, por vezes ornamentados artisticamente e ocupando o lugar central da mesa. No entanto, também são feitos para serem comidos em lanches, sobremesas e até café-da-manhã ou café-da-tarde em fatias"
+		src="../imgs/almondegas.glb">
+	</model-viewer>
+
+
+
+	<!--Logo superior-->
+	<div id="logofazendadavovo">
+
+		<img class="botaoVoltar" src="../imgs/carretLeft.svg" alt="voltar"
+			onclick="retornarParaURL('')" />
+
+		<div class="logosuperior">
+			<img src="imgs/fazenda_da_vovo.png" height="250vh">
+		</div>
+
+	</div>
+
+
+
+	<!--Logo inferior-->
+	<div class="logoinferior">
+		<img src="imgs/bytenfood.png" height="150vh">
+	</div>
+
+
+	<!--botão do AR-->
+
+
+
+	<!--AUDIO-->
+	<audio id="musicadefundo" src="audio/som de abelha.mp3"></audio>
+
+	<!-- BOTOES DE PLAY DO SOM 
+		
+		<div id="player">
+		
+		-->
+
+	<!--ISTO ABAIXO É OPCIONAL
+		
+			<button onclick="document.getElementById('demo').play()"><img src="imgs/play2.png" ></button>
+			<button onclick="document.getElementById('demo').pause()"><img src="imgs/pause.png" ></button>
+			<button onclick="document.getElementById('demo').volume+=0.1"><img src="imgs/plus.png" ></button>
+			<button onclick="document.getElementById('demo').volume-=0.1"><img src="imgs/minus.png" ></button>
+			
+			-->
+	</div>
+
+	<script>
+		function retornarParaURL(id) {
+			var url = `https://customer.bnfbrasil.com.br/product/${id}`;
+			var url = `https://customer.bnfbrasil.com.br/product/${id}`;
+			window.location.href = url;
+		}
+	</script>
+
+</body>
+
+
+</html>
