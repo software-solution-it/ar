@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm ci && npm run prod",
-    "prod": "npm ci && node server.js --urls http://0.0.0.0:3000"
+    "prod": "npm ci"
   },
   "keywords": [],
   "author": "",
